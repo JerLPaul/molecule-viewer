@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Molecule Viewer</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js">
+        </script>
+        <script src="scripts.js"></script>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="addElement">
+          <br>
+          <h1>Elements in the table</h1><br>
+            <div id="elementTable">
+
+            </div>
+            <br>
+            <h1>Add an Element</h1><br>
+            <form action="/element" enctype="multipart/form-data" method="post" id="elementForm">
+                <label for="name">Element name:</label><br>
+                <input type="text" id="name" value="Carbon"><br><br>
+                <label for="number">Element number:</label><br>
+                <input type="number" id="number" value="6"><br><br>
+                <label for="code">Element code:</label><br>
+                <input type="text" id="code" value="C"><br><br>
+                <label for="colour1">Colour 1:</label><br>
+                <input type="text" id="colour1" value="42047e"><br><br>
+                <label for="colour2">Colour 2:</label><br>
+                <input type="text" id="colour2" value="34073d"><br><br>
+                <label for="colour3">Colour 3:</label><br>
+                <input type="text" id="colour3" value="145277"><br><br>
+                <label for="radius">Radius:</label><br>
+                <input type="number" id="radius" value="40"><br><br>
+                <input type="submit" value="submit" id="formButton">
+            </form>
+        </div>
+
+        <div id="select" style="display:none">
+          <br><h1>Select a molecule</h1><br><br>
+            <form action="/displayMol" enctype="multipart/form-data" method="post" id="displayList">
+
+            </form>
+        </div>
+
+        <div id="upload" style="display:none">
+            <h1> File Upload </h1>
+            <form action="/molecule" enctype="multipart/form-data" method="post" id="uploadForm">
+                    <label for="molName">Molecule Name</label><br>
+                    <input type="text" id="molName" name="mol_name"/><br><br>
+                    <input type="file" id="sdf_file" name="filename"/><br>
+                    <input type="submit" value="Upload" id="submitUpload"/>
+            </form>
+        </div>
+
+        <div id="rotate" style="display:none">
+            <h1> Rotate the Molecule </h1>
+            <form action="/rotate" enctype="multipart/form-data" method="post" id="rotateForm">
+                <input type="hidden" id="currMol" value="">
+                <label for="xrot">X rotation:</label><br>
+                <input type="number" id="xrot" name="mol_name" value="0"/><br><br>
+                <label for="yrot">Y rotation:</label><br>
+                <input type="number" id="yrot" value="0"><br><br>
+                <label for="zrot">Z rotation:</label><br>
+                <input type="number" id="zrot" value="0"><br><br>
+                <input type="submit" value="submit">
+            </form>
+        </div>
+        <br><br>
+        <label id="errMsg"></label>
+        <br><br>
+        <button id="btn1">Upload SDF</button>
+        <button id="btn2">Select Molecule</button>
+        <button id="btn3">Add Element</button>
+        <button id="btn4">Rotate Molecule</button>
+
+    </body>
+</html>

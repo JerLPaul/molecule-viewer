@@ -1,0 +1,63 @@
+label {
+    font-family: Verdana, Courier New, Courier, monospace;
+    font-size: 14pt;
+}
+
+h1 {
+    font-family: Verdana, Courier New, Courier, monospace;
+    font-size: 14pt;
+}
+
+p {
+    font-family: Verdana, Courier New, Courier, monospace;
+    font-size: 14pt;
+}
+
+button {
+    font-family: Verdana, Courier New, Courier, monospace;
+    font-size: 12pt;
+}
+
+form {
+    text-align: center;
+    font-family: Verdana, Courier New, Courier, monospace;
+    font-size: 14pt;
+    overflow: hidden;
+
+}
+
+input {
+  overflow: hidden;
+}
+
+iframe {
+    height:100%;
+    width:100%;
+    border:none;
+    overflow: hidden;
+}
+
+#btn1 {
+    vertical-align: bottom;
+
+}
+
+#btn2 {
+    vertical-align: bottom;
+}
+
+#displayWrapper {
+    width:60%;
+    height:100vh;
+    -webkit-overflow-scrolling: touch;
+    background-color: #b8bed9;
+    display:inline-block;
+}
+
+#formWrapper {
+    width:38%;
+    height:100vh;
+    background-color: #b8bed9;
+    padding-left: 1%;
+    display:inline-block;
+}
